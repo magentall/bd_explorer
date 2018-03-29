@@ -1,0 +1,2 @@
+//skilz des profils 2D et 3D
+SELECT Skillz.skill,Skillz.level FROM Skillz WHERE (Skillz.id_profil='Pro_3D') OR (Skillz.id_profil='Pro_2D')

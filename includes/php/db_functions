@@ -1,0 +1,12 @@
+<?php
+function db_connect($host,$user,$pswd,$bd){
+      // Create Connection
+      $conx=mysqli_connect($host,$user,$pswd,$bd);
+      //return mysqli_connect($host,$user,$pswd,$bd);
+      // Check connection
+      if (mysqli_connect_errno()) {
+        echo "Log'in to use";//echo "Failed to connect to MySQL: " . mysqli_connect_error();
+      }
+      return $conx;
+}
+?>

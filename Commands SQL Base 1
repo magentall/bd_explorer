@@ -1,0 +1,37 @@
+Tous les Profils:
+
+SELECT Profil.name_profil,Skillz.skill,Skillz.level, Profil.description FROM Profil INNER JOIN Skillz ON Profil.id_profil=Skillz.id_profil;
+
+
+Profil Social seuls:
+
+SELECT Profil.name_profil,Skillz.skill,Skillz.level, Profil.description FROM Profil INNER JOIN Skillz ON Profil.id_profil=Skillz.id_profil WHERE Profil.name_profil="Profil Social";
+
+Group:
+
+select Human.first_name,Human.code_viz,Groupe.grp_name,Groupe.id_team FROM Human INNER JOIN Groupe ON Human.id_team=Groupe.id_team;
+
+
+One Group:
+select Human.first_name,Human.code_viz,Groupe.grp_name,Groupe.id_team FROM Human INNER JOIN Groupe ON Human.id_team=Groupe.id_team WHERE Human.id_team='TEAM SZ';
+
+
+ORDER BY ..... DESC:
+select Human.first_name,Human.code_viz,Groupe.grp_name,Groupe.id_team FROM Human INNER JOIN Groupe ON Human.id_team=Groupe.id_team WHERE Human.id_team='TEAM SZ' ORDER BY Human.Anniversaire DESC;
+
+select Human.first_name,Human.code_viz,Groupe.grp_name,Groupe.id_team FROM Human INNER JOIN Groupe ON Human.id_team=Groupe.id_team WHERE Human.id_team='TEAM SZ' ORDER BY Human.Anniversaire ASC;
+
+
+INNER INNER:
+
+SELECT Human.name, PC.nom_pc FROM Human INNER JOIN Groupe ON Human.id_team=Groupe.id_team INNER JOIN PC ON PC.code_viz=Human.code_viz;
+
+
+Du meme groupe:
+
+SELECT Human.name, Groupe.grp_name FROM Human INNER JOIN Groupe ON Human.id_team=Groupe.id_team WHERE Groupe.id_team=(SELECT Human.id_team FROM Human WHERE Human.name='user1');
+
+
+Count:
+
+SELECT COUNT(*) FROM Human

@@ -1,0 +1,23 @@
+<?php
+$conx=db_connect($host,$user,$pswd,$bd);
+// Tableau associatif en sortie aussi
+$tabtot=db_query($conx,$query);
+// Close connection
+mysqli_close($conx);
+$ret='';
+//print $table;
+foreach ($tabtot as $key => $value) {
+  //print $key."\n".$tabtot[$key]."<br>";
+$ret=$ret."<li><div class=\"container itemfull\"><div class=\"row\">";
+  foreach ($tabtot[$key] as $keyy => $valuee) {
+      //print $tabtot[$key][$keyy]."<br>";
+      //print $keyy."\n".$valuee."</li>";
+      $ret=$ret."<div class=\"col-3 item\"><div class=\"animated bounceInLeft container\"><div class=\"row\"><div class=\"col-12 tabid\">".$keyy."</div>"."<div class=\"col-12 tabval\">".$valuee."</div></div></div></div>";
+  }
+
+$ret=$ret."</div></div></li>";
+
+}
+
+print $ret;
+?>

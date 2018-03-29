@@ -1,0 +1,5 @@
+CREATE USER 'viz'@'localhost' IDENTIFIED BY 'Bienvenue111***';
+
+
+GRANT ALL PRIVILEGES ON * . * TO 'viz'@'localhost';
+

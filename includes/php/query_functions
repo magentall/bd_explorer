@@ -1,0 +1,19 @@
+<?php
+function db_query($conx,$query){
+        $result = mysqli_query($conx,$query);
+        $tabtot = [];
+        $i=0;
+        while($tab = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+          $tabres = [];
+          foreach ($tab as $key => $value) {
+            //print $value."<br>";
+            //print $key."\n".$tab[$key]."<br>";
+            $tabres[$key] = $value ;
+            $temp=$key;
+          }
+          $tabtot[$i]=$tabres;
+          $i++;
+        }
+        return $tabtot;
+}
+?>

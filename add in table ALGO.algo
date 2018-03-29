@@ -1,0 +1,26 @@
+//  ADD to table row
+
+Query show tables
+display list choice tables
+on table
+
+SHOW COLUMNS FROM table
+//  Display coloumn name and verify if it can be filled
+
+IF col.Key = PRI
+  Display none
+
+IF col.Key = MUL
+  Know the multi value
+  OR
+  display list
+
+
+--
+display col.Field
+input col.Field
+post col.Field
+
+
+query post
+display add or no

@@ -1,0 +1,76 @@
+<!--ModalConnect-->
+<div class="modal fade" id="ConnectModal" tabindex="-1" role="dialog" aria-labelledby="ConnectModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ConnectModalLabel">Connect 2 ur base</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-Connect">host</span>
+          </div>
+          <input type="text" class="form-control" id="host" aria-describedby="basic-Connect">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-Connect">user</span>
+          </div>
+          <input type="text" class="form-control" id="user" aria-describedby="basic-Connect">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-Connect">password</span>
+          </div>
+          <input type="text" class="form-control" id="pswd" aria-describedby="basic-Connect">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-Connect">DataBase name</span>
+          </div>
+          <input type="text" class="form-control" id="bd" aria-describedby="basic-Connect">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="bd_log()" data-dismiss="modal">Connect</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- fin modal connect -->
+<!-- modal ajout dans base -->
+<div class="modal fade" id="AddModal" tabindex="-1" role="dialog" aria-labelledby="AddModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="AddModalLabel">ADD in A TABLE</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group itemfull">
+          <select class="custom-select" id="sel_table">
+        <!--    <option selected>Choose Table</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>-->
+          </select>
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" onclick="load_add_table()">YES</button>
+          </div>
+        </div>
+        <div id="mod_table_add"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="add2Table()">ADD to TABLE</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- fin modal ajout dans base -->
